@@ -32,3 +32,16 @@ if (playerSelection == 'rock' || playerSelection == 'paper' || playerSelection =
     // call the function to clean up new prompt
     playerSelectionLower(playerSelection)
 }
+
+function checkerAndReprompt() {
+
+    // checker and reprompt
+    if (playerSelection == 'rock' || playerSelection == 'paper' || playerSelection == 'scissors') {
+
+    } else {
+        playerSelection = prompt("It seems you entered something other than Rock Paper or Scissors, try again and we can play!")
+        // call the function to clean up new prompt
+        playerSelectionLower(playerSelection)
+    }
+
+}
