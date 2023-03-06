@@ -72,7 +72,10 @@ function getComputerChoice() {
 }
 
 
-function playRound(playerSelection, computerSelection) {
+function playRound() {
+
+    getPlayerChoice()
+    let computerSelection = getComputerChoice()
 
     // paper scenarios 
     if (playerSelection == 'paper' && computerSelection == 'rock') {
@@ -106,3 +109,11 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
+function game() {
+
+    for (let i = 0; i < 5; i++) {
+        console.log(playRound())
+     }
+    
+    
+}
