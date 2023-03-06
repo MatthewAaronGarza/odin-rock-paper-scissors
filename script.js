@@ -110,10 +110,24 @@ function playRound() {
 }
 
 function game() {
-
+    
+    let humanScore = 0
+    let computerScore = 0
+    
     for (let i = 0; i < 5; i++) {
-        console.log(playRound())
+        
+        let gameResult = playRound()
+        console.log(gameResult)
+
+        if (gameResult.includes('win')) {
+            humanScore = humanScore + 1
+
+        } else if (gameResult.includes('lose')) {
+            computerScore = computerScore + 1
+        }
+
+
      }
     
-    
+    console.log("Wow! the final score was " + humanScore + " to " + computerScore)
 }
