@@ -21,5 +21,7 @@ playerSelection = prompt("Let's play Rock Paper Scissors, please enter your choi
 
 function playerSelectionLower(string){
     playerSelection = playerSelection.toLowerCase()
+    return playerSelection
 }
 
+console.log(playerSelectionLower(playerSelection))
