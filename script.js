@@ -82,7 +82,7 @@ function playRound() {
         return "It's a tie! You and the computer both choose paper!"
 
     } else if (playerSelection == 'paper' && computerSelection == 'scissors') {
-        return 'You lose! Scissors loses to rock!'
+        return 'You lose! Paper loses to scissors!'
 
     // rock scenarios
     } else if (playerSelection == 'rock' && computerSelection == 'rock') {
