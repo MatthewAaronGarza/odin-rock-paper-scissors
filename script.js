@@ -15,9 +15,6 @@ the results to the player.
 
 */
 
-// opening prompt 
-
-
 function getPlayerChoice() {
 
     playerSelection = prompt("Let's play Rock Paper Scissors, please enter your choice!")
