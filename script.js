@@ -17,3 +17,6 @@ the results to the player.
 
 playerSelection = prompt("Let's play Rock Paper Scissors, please enter your choice!")
 
+//we need to clean up playerSelection incase folks enter Rock, rocks, or rocks123
+
+playerSelection = playerSelection.toLowerCase()
