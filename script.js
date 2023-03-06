@@ -17,20 +17,13 @@ the results to the player.
 
 // opening prompt 
 playerSelection = prompt("Let's play Rock Paper Scissors, please enter your choice!")
+checkerAndReprompt()
+
 
 // playerSelection to lower case
 function playerSelectionLower(string){
     playerSelection = playerSelection.toLowerCase()
     return playerSelection
-}
-
-// checker and reprompt
-if (playerSelection == 'rock' || playerSelection == 'paper' || playerSelection == 'scissors') {
-
-} else {
-    playerSelection = prompt("It seems you entered something other than Rock Paper or Scissors, try again and we can play!")
-    // call the function to clean up new prompt
-    playerSelectionLower(playerSelection)
 }
 
 function checkerAndReprompt() {
@@ -42,6 +35,9 @@ function checkerAndReprompt() {
         playerSelection = prompt("It seems you entered something other than Rock Paper or Scissors, try again and we can play!")
         // call the function to clean up new prompt
         playerSelectionLower(playerSelection)
+        // introduced recursion
+        checkerAndReprompt()
     }
 
 }
+
