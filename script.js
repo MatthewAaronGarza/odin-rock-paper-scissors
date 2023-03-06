@@ -14,3 +14,6 @@ the function playGame(playerSelection, getComputerChoice) will see who between t
 the results to the player.
 
 */
+
+playerSelection = prompt("Let's play Rock Paper Scissors, please enter your choice!")
+
