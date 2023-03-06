@@ -46,10 +46,19 @@ function getRandomIntegerBetween1and3() {
     let min = Math.ceil(1) // since we are only looking for a random number between 1 and 3 with 1 the min
     let max = Math.max(3) //  since we are only looking for a random number between 1 and 3 with 3 the max
 
-    return Math.floor(Math.random() * (max - min + 1) + min ); // now we have a random number between 1 and 3 inclusive of 1 and 3
-    
+    return Math.floor(Math.random() * (max - min + 1) + min ) // now we have a random number between 1 and 3 inclusive of 1 and 3
+
 }
 
 
 function getComputerChoice() {
+    let computerNumber = getRandomIntegerBetween1and3
+    if (computerNumber == 1) {
+        return 'rock'
+    } else if (computerNumber == 2) {
+        return 'paper'
+    } else {
+        return 'scissors'
+    }
 }
+
