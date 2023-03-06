@@ -17,8 +17,15 @@ the results to the player.
 
 // opening prompt 
 
-// playerSelection = prompt("Let's play Rock Paper Scissors, please enter your choice!")
-// checkerAndReprompt()
+
+function getPlayerChoice() {
+
+    playerSelection = prompt("Let's play Rock Paper Scissors, please enter your choice!")
+    playerSelectionLower(playerSelection)
+    checkerAndReprompt(playerSelection)
+    return playerSelection 
+
+}
 
 
 // playerSelection to lower case
@@ -27,7 +34,8 @@ function playerSelectionLower(string){
     return playerSelection
 }
 
-function checkerAndReprompt() {
+
+function checkerAndReprompt(string) {
 
     // checker and reprompt
     if (playerSelection == 'rock' || playerSelection == 'paper' || playerSelection == 'scissors') {
@@ -63,8 +71,10 @@ function getComputerChoice() {
     }
 }
 
+
 function playRound(playerSelection, computerSelection) {
 
+    // paper scenarios 
     if (playerSelection == 'paper' && computerSelection == 'rock') {
         return 'You win! Paper beats rock!'
 
@@ -74,7 +84,7 @@ function playRound(playerSelection, computerSelection) {
     } else if (playerSelection == 'paper' && computerSelection == 'scissors') {
         return 'You lose! Scissors loses to rock!'
 
-
+    // rock scenarios
     } else if (playerSelection == 'rock' && computerSelection == 'rock') {
         return "It's a tie! You and the computer both choose rock!"
 
@@ -84,7 +94,7 @@ function playRound(playerSelection, computerSelection) {
     } else if (playerSelection == 'rock' && computerSelection == 'scissors') {
         return "You win! Rock beats scissors!"
 
-
+    // scissor scenarios
     } else if (playerSelection == 'scissors' && computerSelection == 'rock') {
         return "You lose! Scissors loses to rock!"
 
@@ -96,4 +106,3 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-console.log(playRound('rock', getComputerChoice()))
