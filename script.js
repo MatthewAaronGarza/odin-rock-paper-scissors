@@ -18,10 +18,6 @@ the results to the player.
 // opening prompt 
 playerSelection = prompt("Let's play Rock Paper Scissors, please enter your choice!")
 
-//we need to clean up playerSelection incase folks enter Rock, rocks
-
-
-
 // playerSelection to lower case
 function playerSelectionLower(string){
     playerSelection = playerSelection.toLowerCase()
@@ -33,4 +29,6 @@ if (playerSelection == 'rock' || playerSelection == 'paper' || playerSelection =
 
 } else {
     playerSelection = prompt("It seems you entered something other than Rock Paper or Scissors, try again and we can play!")
+    // call the function to clean up new prompt
+    playerSelectionLower(playerSelection)
 }
