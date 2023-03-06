@@ -94,5 +94,6 @@ function playRound(playerSelection, computerSelection) {
     } else if (playerSelection == 'scissors' && computerSelection == 'scissors') {
         return "It's a tie! You and the computer both choose scissors!"
     }
-=
 }
+
+console.log(playRound('rock', getComputerChoice()))
