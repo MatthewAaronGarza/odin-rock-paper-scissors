@@ -52,7 +52,7 @@ function getRandomIntegerBetween1and3() {
 
 
 function getComputerChoice() {
-    let computerNumber = getRandomIntegerBetween1and3
+    let computerNumber = getRandomIntegerBetween1and3()
     if (computerNumber == 1) {
         return 'rock'
     } else if (computerNumber == 2) {
