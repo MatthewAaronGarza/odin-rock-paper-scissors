@@ -16,8 +16,9 @@ the results to the player.
 */
 
 // opening prompt 
-playerSelection = prompt("Let's play Rock Paper Scissors, please enter your choice!")
-checkerAndReprompt()
+
+// playerSelection = prompt("Let's play Rock Paper Scissors, please enter your choice!")
+// checkerAndReprompt()
 
 
 // playerSelection to lower case
@@ -62,3 +63,36 @@ function getComputerChoice() {
     }
 }
 
+function playRound(playerSelection, computerSelection) {
+
+    if (playerSelection == 'paper' && computerSelection == 'rock') {
+        return 'You win! Paper beats rock!'
+
+    } else if (playerSelection == 'paper' && computerSelection == 'paper') {
+        return "It's a tie! You and the computer both choose paper!"
+
+    } else if (playerSelection == 'paper' && computerSelection == 'scissors') {
+        return 'You lose! Scissors loses to rock!'
+
+
+    } else if (playerSelection == 'rock' && computerSelection == 'rock') {
+        return "It's a tie! You and the computer both choose rock!"
+
+    } else if (playerSelection == 'rock' && computerSelection == 'paper') {
+        return "You lose! Rock loses to paper!"
+
+    } else if (playerSelection == 'rock' && computerSelection == 'scissors') {
+        return "You win! Rock beats scissors!"
+
+
+    } else if (playerSelection == 'scissors' && computerSelection == 'rock') {
+        return "You lose! Scissors loses to rock!"
+
+    } else if (playerSelection == 'scissors' && computerSelection == 'paper') {
+        return "You win! Scissors beats paper!"
+
+    } else if (playerSelection == 'scissors' && computerSelection == 'scissors') {
+        return "It's a tie! You and the computer both choose scissors!"
+    }
+=
+}
