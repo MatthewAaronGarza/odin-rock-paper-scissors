@@ -24,4 +24,3 @@ function playerSelectionLower(string){
     return playerSelection
 }
 
-console.log(playerSelectionLower(playerSelection))
