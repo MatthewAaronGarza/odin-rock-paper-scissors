@@ -27,5 +27,5 @@ function playerSelectionLower(string){
 if (playerSelection == 'rock' || playerSelection == 'paper' || playerSelection == 'scissors') {
 
 } else {
-    return playerSelection = prompt("It seems you entered something other than Rock Paper or Scissors, try again and we can play!")
+    playerSelection = prompt("It seems you entered something other than Rock Paper or Scissors, try again and we can play!")
 }
