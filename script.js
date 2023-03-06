@@ -32,7 +32,7 @@ function checkerAndReprompt() {
     if (playerSelection == 'rock' || playerSelection == 'paper' || playerSelection == 'scissors') {
 
     } else {
-        playerSelection = prompt("It seems you entered something other than Rock Paper or Scissors, try again and we can play!")
+        playerSelection = prompt("It seems you entered something other than Rock, Paper, or Scissors, try again and we can play!")
         // call the function to clean up new prompt
         playerSelectionLower(playerSelection)
         // introduced recursion so that we eventually get a correct entry or we continually ask for one that works
@@ -41,3 +41,15 @@ function checkerAndReprompt() {
 
 }
 
+
+function getRandomIntegerBetween1and3() {
+    let min = Math.ceil(1) // since we are only looking for a random number between 1 and 3 with 1 the min
+    let max = Math.max(3) //  since we are only looking for a random number between 1 and 3 with 3 the max
+
+    return Math.floor(Math.random() * (max - min + 1) + min ); // now we have a random number between 1 and 3 inclusive of 1 and 3
+    
+}
+
+
+function getComputerChoice() {
+}
