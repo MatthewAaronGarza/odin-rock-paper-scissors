@@ -35,7 +35,7 @@ function checkerAndReprompt() {
         playerSelection = prompt("It seems you entered something other than Rock Paper or Scissors, try again and we can play!")
         // call the function to clean up new prompt
         playerSelectionLower(playerSelection)
-        // introduced recursion
+        // introduced recursion so that we eventually get a correct entry or we continually ask for one that works
         checkerAndReprompt()
     }
 
