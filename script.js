@@ -15,15 +15,20 @@ the results to the player.
 
 */
 
+// opening prompt 
 playerSelection = prompt("Let's play Rock Paper Scissors, please enter your choice!")
 
 //we need to clean up playerSelection incase folks enter Rock, rocks
 
+
+
+// playerSelection to lower case
 function playerSelectionLower(string){
     playerSelection = playerSelection.toLowerCase()
     return playerSelection
 }
 
+// checker and reprompt
 if (playerSelection == 'rock' || playerSelection == 'paper' || playerSelection == 'scissors') {
 
 } else {
