@@ -147,3 +147,10 @@ we want someone to click on the image, that is their selection
 // let paper = document.getElementsByClassName('paper')
 // let scissors = document.getElementsByClassName('paper')
 
+let rock = document.getElementById('rock')
+
+rock.addEventListener('click', function(){
+
+    document.getElementById('rock').style.border = 'thick solid #0000FF'
+
+})
