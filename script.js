@@ -124,7 +124,7 @@ function game() {
         }
 
 
-     }
+    }
     
     console.log("Wow! the final score was " + humanScore + " to " + computerScore)
 }
