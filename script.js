@@ -128,3 +128,22 @@ function game() {
     
     console.log("Wow! the final score was " + humanScore + " to " + computerScore)
 }
+
+
+
+
+/* 
+
+we want someone to click on the image, that is their selection
+
+
+*/
+
+// let content = document.getElementsByClassName('content')
+// let title = document.getElementsByClassName('title')
+
+
+// let rock = document.getElementsByClassName('rock')
+// let paper = document.getElementsByClassName('paper')
+// let scissors = document.getElementsByClassName('paper')
+

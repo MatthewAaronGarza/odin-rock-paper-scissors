@@ -2,19 +2,19 @@
     border: solid black 1px;
 } */
 
-.content {
+#content {
     display: flex;
     flex-direction: column;
     
 }
 
-.title {
+#title {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.rps {
+#rps {
     display: flex;
     justify-content: space-between;
     margin: 20px;
@@ -24,3 +24,4 @@
     width: 500px;
     height: 500px;
 }
+
