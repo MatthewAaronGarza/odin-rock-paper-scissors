@@ -2,6 +2,15 @@
     border: solid black 1px;
 } */
 
+* {
+
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #E2F89C;
+    color: #3F7CAC;
+  
+
+}
+
 #content {
     display: flex;
     flex-direction: column;
@@ -23,6 +32,7 @@
 .image {
     width: 500px;
     height: 500px;
+    border-radius: 10%;
 }
 
 #score-wrapper {
