@@ -172,11 +172,11 @@ rock.addEventListener('click', function(){
 
     // need to create somewhere for the string to live - 
 
-    let outcomeTextHolder = document.createElement('p')
-
     let outcomeText = playRound(playerSelection)
 
     let outcome = document.getElementById('outcome')
+
+    let outcomeTextHolder = document.getElementById('outcome-text')
 
     // following to make sure that the outcomeText works
     // console.log(outcomeText)
@@ -223,11 +223,11 @@ paper.addEventListener('click', function(){
 
     // need to create somewhere for the string to live - 
 
-    let outcomeTextHolder = document.createElement('p')
-
     let outcomeText = playRound(playerSelection)
 
     let outcome = document.getElementById('outcome')
+
+    let outcomeTextHolder = document.getElementById('outcome-text')
 
     // following to make sure that the outcomeText works
     // console.log(outcomeText)
@@ -274,11 +274,11 @@ scissors.addEventListener('click', function(){
 
     // need to create somewhere for the string to live - 
 
-    let outcomeTextHolder = document.createElement('p')
-
     let outcomeText = playRound(playerSelection)
 
     let outcome = document.getElementById('outcome')
+
+    let outcomeTextHolder = document.getElementById('outcome-text')
 
     // following to make sure that the outcomeText works
     // console.log(outcomeText)
@@ -317,5 +317,4 @@ scissors.addEventListener('click', function(){
     // console.log(playerScore)
     // console.log(computerScore)
 
-    
 })
