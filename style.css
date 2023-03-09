@@ -25,3 +25,8 @@
     height: 500px;
 }
 
+#outcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

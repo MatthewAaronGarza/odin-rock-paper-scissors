@@ -15,37 +15,37 @@ the results to the player.
 
 */
 
-function getPlayerChoice() {
+// function getPlayerChoice() {
 
-    playerSelection = prompt("Let's play Rock Paper Scissors, please enter your choice!")
-    playerSelectionLower(playerSelection)
-    checkerAndReprompt(playerSelection)
-    return playerSelection 
+//     playerSelection = prompt("Let's play Rock Paper Scissors, please enter your choice!")
+//     playerSelectionLower(playerSelection)
+//     checkerAndReprompt(playerSelection)
+//     return playerSelection 
 
-}
+// }
 
 
 // playerSelection to lower case
-function playerSelectionLower(string){
-    playerSelection = playerSelection.toLowerCase()
-    return playerSelection
-}
+// function playerSelectionLower(string){
+//     playerSelection = playerSelection.toLowerCase()
+//     return playerSelection
+// }
 
 
-function checkerAndReprompt(string) {
+// function checkerAndReprompt(string) {
 
-    // checker and reprompt
-    if (playerSelection == 'rock' || playerSelection == 'paper' || playerSelection == 'scissors') {
+//     // checker and reprompt
+//     if (playerSelection == 'rock' || playerSelection == 'paper' || playerSelection == 'scissors') {
 
-    } else {
-        playerSelection = prompt("It seems you entered something other than Rock, Paper, or Scissors, try again and we can play!")
-        // call the function to clean up new prompt
-        playerSelectionLower(playerSelection)
-        // introduced recursion so that we eventually get a correct entry or we continually ask for one that works
-        checkerAndReprompt()
-    }
+//     } else {
+//         playerSelection = prompt("It seems you entered something other than Rock, Paper, or Scissors, try again and we can play!")
+//         // call the function to clean up new prompt
+//         playerSelectionLower(playerSelection)
+//         // introduced recursion so that we eventually get a correct entry or we continually ask for one that works
+//         checkerAndReprompt()
+//     }
 
-}
+// }
 
 
 function getRandomIntegerBetween1and3() {
@@ -69,13 +69,16 @@ function getComputerChoice() {
 }
 
 
-function playRound() {
+function playRound(playerSelection) {
 
-    getPlayerChoice()
+    // getPlayerChoice()
     let computerSelection = getComputerChoice()
 
     // paper scenarios 
     if (playerSelection == 'paper' && computerSelection == 'rock') {
+        
+        
+        
         return 'You win! Paper beats rock!'
 
     } else if (playerSelection == 'paper' && computerSelection == 'paper') {
@@ -104,7 +107,13 @@ function playRound() {
     } else if (playerSelection == 'scissors' && computerSelection == 'scissors') {
         return "It's a tie! You and the computer both choose scissors!"
     }
+
+
+
 }
+
+
+
 
 function game() {
     
@@ -148,9 +157,106 @@ we want someone to click on the image, that is their selection
 // let scissors = document.getElementsByClassName('paper')
 
 let rock = document.getElementById('rock')
+let paper = document.getElementById('paper')
+let scissors = document.getElementById('scissors')
+
+
+playerSelection = ''
+
+
 
 rock.addEventListener('click', function(){
 
-    document.getElementById('rock').style.border = 'thick solid #0000FF'
+    playerSelection = 'rock'
 
+    // need to create somewhere for the string to live - 
+
+    let outcomeTextHolder = document.createElement('p')
+
+    let outcomeText = playRound(playerSelection)
+
+    let outcome = document.getElementById('outcome')
+
+    // following to make sure that the outcomeText works
+    // console.log(outcomeText)
+
+    // now we need to put it into the outcomeTextHolder
+
+    outcomeTextHolder.textContent = outcomeText
+
+    // following is to make sure that the outcomeTextHolder also 
+    // correctly holds the text
+    // console.log(outComeTextHolder)
+
+    // now we need to add the outcomeTextHolder to the outcome Div
+
+    outcome.prepend(outcomeTextHolder)
+
+    // now we need to clear the text away somehow
+
+    
+})
+
+paper.addEventListener('click', function(){
+
+    playerSelection = 'paper'
+
+    // need to create somewhere for the string to live - 
+
+    let outcomeTextHolder = document.createElement('p')
+
+    let outcomeText = playRound(playerSelection)
+
+    let outcome = document.getElementById('outcome')
+
+    // following to make sure that the outcomeText works
+    // console.log(outcomeText)
+
+    // now we need to put it into the outcomeTextHolder
+
+    outcomeTextHolder.textContent = outcomeText
+
+    // following is to make sure that the outcomeTextHolder also 
+    // correctly holds the text
+    // console.log(outComeTextHolder)
+
+    // now we need to add the outcomeTextHolder to the outcome Div
+
+    outcome.prepend(outcomeTextHolder)
+
+    // now we need to clear the text away somehow
+
+    
+})
+
+scissors.addEventListener('click', function(){
+
+    playerSelection = 'scissors'
+
+    // need to create somewhere for the string to live - 
+
+    let outcomeTextHolder = document.createElement('p')
+
+    let outcomeText = playRound(playerSelection)
+
+    let outcome = document.getElementById('outcome')
+
+    // following to make sure that the outcomeText works
+    // console.log(outcomeText)
+
+    // now we need to put it into the outcomeTextHolder
+
+    outcomeTextHolder.textContent = outcomeText
+
+    // following is to make sure that the outcomeTextHolder also 
+    // correctly holds the text
+    // console.log(outComeTextHolder)
+
+    // now we need to add the outcomeTextHolder to the outcome Div
+
+    outcome.prepend(outcomeTextHolder)
+
+    // now we need to clear the text away somehow
+
+    
 })
