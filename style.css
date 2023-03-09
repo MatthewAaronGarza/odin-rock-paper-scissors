@@ -25,6 +25,12 @@
     height: 500px;
 }
 
+#score-wrapper {
+    display: flex;
+    justify-content: center;
+    
+}
+
 #outcome {
     display: flex;
     flex-direction: column;

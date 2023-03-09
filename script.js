@@ -162,7 +162,8 @@ let scissors = document.getElementById('scissors')
 
 
 playerSelection = ''
-
+playerScore = 0
+computerScore = 0
 
 
 rock.addEventListener('click', function(){
@@ -194,6 +195,25 @@ rock.addEventListener('click', function(){
 
     // now we need to clear the text away somehow
 
+
+    if (outcomeText.includes('win')) {
+        playerScore = playerScore + 1
+
+    } else if (outcomeText.includes('lose')) {
+        computerScore = computerScore + 1
+    }
+
+    let scoreMessage = 'Your score: ' + playerScore + ' - ' + "Computer score: " + computerScore
+
+    let score = document.getElementById('score')
+
+    score.textContent = scoreMessage
+
+
+    // console.log(scoreMessage)
+
+    // console.log(playerScore)
+    // console.log(computerScore)
     
 })
 
@@ -226,6 +246,25 @@ paper.addEventListener('click', function(){
 
     // now we need to clear the text away somehow
 
+
+    if (outcomeText.includes('win')) {
+        playerScore = playerScore + 1
+
+    } else if (outcomeText.includes('lose')) {
+        computerScore = computerScore + 1
+    }
+
+    let scoreMessage = 'Your score: ' + playerScore + ' - ' + "Computer score: " + computerScore
+
+    let score = document.getElementById('score')
+
+    score.textContent = scoreMessage
+
+
+    // console.log(scoreMessage)
+
+    // console.log(playerScore)
+    // console.log(computerScore)
     
 })
 
@@ -257,6 +296,26 @@ scissors.addEventListener('click', function(){
     outcome.prepend(outcomeTextHolder)
 
     // now we need to clear the text away somehow
+
+
+    if (outcomeText.includes('win')) {
+        playerScore = playerScore + 1
+
+    } else if (outcomeText.includes('lose')) {
+        computerScore = computerScore + 1
+    }
+
+    let scoreMessage = 'Your score: ' + playerScore + ' - ' + "Computer score: " + computerScore
+
+    let score = document.getElementById('score')
+
+    score.textContent = scoreMessage
+
+
+    // console.log(scoreMessage)
+
+    // console.log(playerScore)
+    // console.log(computerScore)
 
     
 })
